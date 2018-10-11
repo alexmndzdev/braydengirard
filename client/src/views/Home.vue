@@ -5,30 +5,56 @@
         <div class="container">
           <div class="row cards">
             <div class="column column-offset-50">
-              <p>You can find me here</p>
-              <HeroCard title="View All Projects" icon="../assets/images/project-bar.svg" />
-              <HeroCard title="View All Projects" icon="../assets/images/podcast-bar.svg" />
-              <HeroCard title="View All Projects" icon="../assets/images/blog-bar.svg" />
-              <HeroCard title="View All Projects" icon="../assets/images/social-bar.svg" />
+              <h2>You can find me here</h2>
+              <HeroCard title="View My Projects" icon="../assets/images/project-bar.svg')" />
+              <HeroCard title="Listen To My Podcast" icon="../assets/images/podcast-bar.svg" />
+              <HeroCard title="Read My Blog" icon="../assets/images/blog-bar.svg" />
+              <HeroCard title="Follow Me" icon="../assets/images/social-bar.svg" />
             </div>
           </div>
         </div>
+    </section>
+    <section id="about">
+      <PageHeader subtitle="I am a Canadian" title="Professor & Developer" text="My general attitude to life is to enjoy every minute of every day. I never do anything with a feeling of, 'Oh God, I've got to do this today.' - Richard Branson" />
+    </section>
+    <section id="activity">
+      <PageSubHeader subtitle="What have I been up to?" title="Recenty Activity" />
+      <div class="container activity-cards">
+        <ActivityCard image="../assets/images/social-bar.svg" 
+                      title="This is a tweet title" 
+                      text="Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…"
+                      source="Twitter"
+                      date="October 15 2018"
+                      link="https://twitter.com"
+        />
+        <p id="last-updated-text"><span>Last updated:</span> 3 hours ago</p>
+      </div>
+    </section>
+    <section id="footer-block">
+      <Footer />
     </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Nav from '@/components/Nav.vue'
-import HeroCard from '@/components/HeroCard.vue'
+  import Nav from '@/components/Nav.vue'
+  import HeroCard from '@/components/HeroCard.vue'
+  import PageHeader from '@/components/PageHeader.vue'
+  import PageSubHeader from '@/components/PageSubHeader.vue'
+  import ActivityCard from '@/components/ActivityCard.vue'
+  import Footer from '@/components/Footer.vue'
 
-export default {
-  name: 'home',
-  components: {
-    Nav,
-    HeroCard
+  export default {
+    name: 'home',
+    components: {
+      Nav,
+      HeroCard,
+      PageHeader,
+      PageSubHeader,
+      ActivityCard,
+      Footer
+    }
   }
-}
 </script>
 
 <style scoped>
@@ -38,28 +64,53 @@ export default {
     background-size: cover;
     background-position: center; 
   }
-
-  .row.cards {
-    margin-top: 18px;
-  }
-
-  .row.cards p {
-    margin-top: 59px;
-    line-height: 38px;
-    text-align: center;
-    color: var(--white-color);
-    font-size: 30px;
-  }
-
   @media (max-width: 768px) {
     #hero { 
       background-image: url("../assets/images/hero-small.jpg");
     }
+  }
+
+  .row.cards {
+    margin-top: 18px;
+  }
+  .row.cards h2 {
+    margin-top: 59px;
+    margin-bottom:18px;
+    text-align: center;
+    color: var(--white-color);
+  }
+  @media(max-width: 768px) {
     .row .column.column-offset-50 {
       margin: 0;
     }
-    .row.cards p {
-      margin-top: 20px;
+    .row.cards h2 {
+      margin-top: 0;
     }
+  }
+
+  #about {
+    margin-top: -100px;
+    margin-bottom: 89px;
+  }
+  @media(max-width: 768px) {
+    #about {
+      margin-top: 0px;
+    }
+  }
+
+  #activity .activity-cards {
+    margin-top: 43px;
+  }
+
+  #last-updated-text {
+    color: var(--light-color);
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 34px;
+  }
+
+  #last-updated-text span {
+    font-weight: bold;
   }
 </style>

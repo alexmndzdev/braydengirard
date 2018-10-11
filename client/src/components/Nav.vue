@@ -32,11 +32,6 @@ export default {
     padding: 10px;
     text-align: left;
   }
-
-  .nav-background {
-    background-color: var(--black-color);
-  }
-
   #nav a {
     font-size: 18px;
     color: var(--white-color);
@@ -44,34 +39,15 @@ export default {
     line-height: 50px;
     vertical-align: middle;
   }
-
   #nav .logo-text a {
     font-size: 40px;
     line-height: 50px;
     font-weight: bold;
   }
-
   #nav .contact {
     text-align: right;
   }
-
-  .desktop-only {
-    display: flex;
-  }
-  
-  .mobile-only {
-    display: none;
-  }
-
   @media (max-width: 768px) {
-    .desktop-only {
-      display: none;
-    }
-    
-    .mobile-only {
-      display: flex;
-    }
-
     #nav .logo-text-mobile a {
       font-size: 38px;
       margin: 0;
@@ -79,6 +55,25 @@ export default {
 
     #nav .logo-text-mobile {
       text-align: center;
+    }
+  }
+  
+  .nav-background {
+    background-color: var(--black-color);
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+  .mobile-only {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: flex;
     }
   }
 </style>

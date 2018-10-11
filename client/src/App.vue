@@ -16,5 +16,46 @@
     -moz-osx-font-smoothing: grayscale;
     --white-color: white;
     --black-color: black;
+    --dark-color: #272727;
+    --light-color: #9B9B9B;
+  }
+  h1 {
+    color: #272727;
+    font-size: 62px;
+    font-weight: bold;
+    line-height: 78px;
+    margin-bottom: 0;
+  }
+  h2 {
+    color: #9B9B9B;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 0;
+  }
+  p {
+	  color: #9B9B9B;
+	  font-size: 18px;
+	  line-height: 21px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      color: #272727;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 54px;
+      margin-bottom: 0;
+    }
+    h2 {
+      color: #9B9B9B;
+      font-size: 22px;
+      line-height: 35px;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 15px;
+      line-height: 16px;
+    }
   }
 </style>
