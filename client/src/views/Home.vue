@@ -6,7 +6,7 @@
           <div class="row cards">
             <div class="column column-offset-50">
               <h2>You can find me here</h2>
-              <HeroCard title="View My Projects" icon="../assets/images/project-bar.svg')" />
+              <HeroCard title="View My Projects" icon="../assets/images/project-bar.svg" />
               <HeroCard title="Listen To My Podcast" icon="../assets/images/podcast-bar.svg" />
               <HeroCard title="Read My Blog" icon="../assets/images/blog-bar.svg" />
               <HeroCard title="Follow Me" icon="../assets/images/social-bar.svg" />
